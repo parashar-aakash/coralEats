@@ -1,4 +1,4 @@
-exports.getResponse = (res, data) => {
+const getResponse = (res, data) => {
     res.status(200).json({
         success: true,
         code: 200,
@@ -6,7 +6,7 @@ exports.getResponse = (res, data) => {
     });
 }
 
-exports.updateResponse = (res, data, message) => {
+const updateResponse = (res, data, message) => {
     res.send({
         message,
         success: true,
@@ -15,3 +15,7 @@ exports.updateResponse = (res, data, message) => {
     });
 }
 
+export {
+    getResponse,
+    updateResponse
+};
