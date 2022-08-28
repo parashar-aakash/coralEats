@@ -4,6 +4,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import { config } from 'dotenv';
 import restroRoute from './api/routes/restro.js';
+import reviewsRoute from './api/routes/reviews.js';
 config();
 const envVars = process.env;
 mongoose.set('useFindAndModify', false);
@@ -22,7 +23,7 @@ console.log('PORT', process.env.PORT);
 const PORT = process.env.PORT;
 
 app.use('/api/restro', restroRoute);
-// app.use('/api/admin', reviewsRoute);
+app.use('/api/reviews', reviewsRoute);
 
 app.listen(PORT, () => {
     console.log(`Server listen from ${PORT}`);
