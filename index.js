@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import { config } from 'dotenv';
 import restroRoute from './api/routes/restro.js';
 import reviewsRoute from './api/routes/reviews.js';
+import adminRoute from './api/routes/admin.js';
 config();
 const envVars = process.env;
 mongoose.set('useFindAndModify', false);
@@ -24,6 +25,7 @@ const PORT = process.env.PORT;
 
 app.use('/api/restro', restroRoute);
 app.use('/api/reviews', reviewsRoute);
+app.use('/api/admin', adminRoute);
 
 app.listen(PORT, () => {
     console.log(`Server listen from ${PORT}`);

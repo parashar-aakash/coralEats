@@ -17,7 +17,7 @@ import Reviews from "../models/Reviews.js";
     const result =await Reviews.find({});
     console.log('result', result);
     const finalReviews = result[0]?[...result[0].Review, req.body.Review]:req.body.Review;
-        Reviews.findOneAndUpdate({RID: req.body.RID}, { Review: finalReviews }, { upsert: true })
+        Reviews.findOneAndUpdate({RID: req.body.RID}, { Review: finalReviews, customer: "Anonymous" }, { upsert: true })
         .then(restro => {
             updateResponse(res, restro, 'Review created successfully.');
         })

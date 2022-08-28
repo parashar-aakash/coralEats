@@ -7,6 +7,9 @@ const reviewsSchema = new Schema({
     Review: {
         type: [String],
         required: [true, 'Reviews cannot be blank.']
+    },
+    customer: {
+        type: [String],
     }
 });
 
