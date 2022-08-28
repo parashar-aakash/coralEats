@@ -1,0 +1,8 @@
+
+HTTP Verb                   API Endpoint               Brief Description
+GET                          /api/restro                to retrive details of all the restaurant present in DB
+GET                          /api/restro/:id            to retrive a particular restaurant details
+POST                         /api/restro                to add new restaurant details to DB
+GET                          /api/reviews/:id           to get all the review of a particular restaurant based on RID
+POST                         /api/reviews               to add new reviews
+GET                          /api/admin                 to authenticate the admin and show the reports of all the review

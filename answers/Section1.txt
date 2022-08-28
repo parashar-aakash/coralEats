@@ -1,0 +1,13 @@
+Q1. What are the database tables / NoSQL Collections that you will create for this requirement? 
+What will be the names of the tables? What are the columns/attributes that the table will have? 
+How will the tables be related to each other at the database level?
+
+Answer: Two Collections are made, naming restaurant and reviews
+Fields of each Collections are given below:
+# restaurant                                                       #reviews
+ 1. RID => unique restaurant ID                                     RID
+ 2. Name                                                            Reviews => Array of All the reviews for a restaurant
+ 3. Address                                                         costomer => Array of all the costomer who added reviews
+ 4. Description
+
+Common attribute btw then is RID ( unique restaurant ID  ), both these tables are related by this RID.
